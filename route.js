@@ -26,7 +26,7 @@ const requestHandler = (req, res) => {
   
             // Parsing the chunk data
             const parsedBody = Buffer.concat(body).toString();
-            const message = parsedBody.split('=')[1].replace("+"," ");
+            const message = parsedBody.split('=')[1].replaceAll("+"," ");
             
             // Printing the data
             console.log(parsedBody);
